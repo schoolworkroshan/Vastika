@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES">
+        <attribute name="contactNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Staff" representedClassName="Staff" parentEntity="Person" syncable="YES">
+        <attribute name="jobTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" parentEntity="Person" syncable="YES">
+        <attribute name="bench" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="dateJoined" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="degree" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="interest" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="training" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="visaStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="working" optional="YES" attributeType="Boolean" syncable="YES"/>
+    </entity>
+    <entity name="Tutor" representedClassName="Tutor" parentEntity="Person" syncable="YES">
+        <attribute name="salary" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speciality" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Student" positionX="-54" positionY="-9" width="128" height="178"/>
+        <element name="Staff" positionX="-36" positionY="9" width="128" height="58"/>
+        <element name="Tutor" positionX="-18" positionY="27" width="128" height="73"/>
+    </elements>
 </model>
