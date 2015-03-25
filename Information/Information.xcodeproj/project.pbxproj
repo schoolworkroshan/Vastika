@@ -15,10 +15,11 @@
 		C9402DD21AC31981006FB1F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9402DD11AC31981006FB1F5 /* Images.xcassets */; };
 		C9402DD51AC31981006FB1F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9402DD31AC31981006FB1F5 /* LaunchScreen.xib */; };
 		C9402DE11AC31981006FB1F5 /* InformationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402DE01AC31981006FB1F5 /* InformationTests.m */; };
-		C9402DEC1AC32C9D006FB1F5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402DEB1AC32C9D006FB1F5 /* Staff.m */; };
-		C9402DEF1AC32C9F006FB1F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402DEE1AC32C9F006FB1F5 /* Person.m */; };
-		C9402DF21AC32C9F006FB1F5 /* Tutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402DF11AC32C9F006FB1F5 /* Tutor.m */; };
-		C9402DF51AC32C9F006FB1F5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402DF41AC32C9F006FB1F5 /* Student.m */; };
+		C9402E081AC343F0006FB1F5 /* HelperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E071AC343F0006FB1F5 /* HelperClass.m */; };
+		C9402E0B1AC3488B006FB1F5 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E0A1AC3488B006FB1F5 /* Student.m */; };
+		C9402E0E1AC3488B006FB1F5 /* Tutor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E0D1AC3488B006FB1F5 /* Tutor.m */; };
+		C9402E111AC3488B006FB1F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E101AC3488B006FB1F5 /* Person.m */; };
+		C9402E141AC3488B006FB1F5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E131AC3488B006FB1F5 /* Staff.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +47,16 @@
 		C9402DDA1AC31981006FB1F5 /* InformationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InformationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9402DDF1AC31981006FB1F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9402DE01AC31981006FB1F5 /* InformationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InformationTests.m; sourceTree = "<group>"; };
-		C9402DEA1AC32C9D006FB1F5 /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = "Core Data /Staff.h"; sourceTree = "<group>"; };
-		C9402DEB1AC32C9D006FB1F5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = "Core Data /Staff.m"; sourceTree = "<group>"; };
-		C9402DED1AC32C9F006FB1F5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = "Core Data /Person.h"; sourceTree = "<group>"; };
-		C9402DEE1AC32C9F006FB1F5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = "Core Data /Person.m"; sourceTree = "<group>"; };
-		C9402DF01AC32C9F006FB1F5 /* Tutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tutor.h; path = "Core Data /Tutor.h"; sourceTree = "<group>"; };
-		C9402DF11AC32C9F006FB1F5 /* Tutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tutor.m; path = "Core Data /Tutor.m"; sourceTree = "<group>"; };
-		C9402DF31AC32C9F006FB1F5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = "Core Data /Student.h"; sourceTree = "<group>"; };
-		C9402DF41AC32C9F006FB1F5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = "Core Data /Student.m"; sourceTree = "<group>"; };
+		C9402E061AC343F0006FB1F5 /* HelperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperClass.h; path = ../HelperClass.h; sourceTree = "<group>"; };
+		C9402E071AC343F0006FB1F5 /* HelperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperClass.m; path = ../HelperClass.m; sourceTree = "<group>"; };
+		C9402E091AC3488B006FB1F5 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Student.h; path = ../Student.h; sourceTree = "<group>"; };
+		C9402E0A1AC3488B006FB1F5 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Student.m; path = ../Student.m; sourceTree = "<group>"; };
+		C9402E0C1AC3488B006FB1F5 /* Tutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tutor.h; path = ../Tutor.h; sourceTree = "<group>"; };
+		C9402E0D1AC3488B006FB1F5 /* Tutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tutor.m; path = ../Tutor.m; sourceTree = "<group>"; };
+		C9402E0F1AC3488B006FB1F5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
+		C9402E101AC3488B006FB1F5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
+		C9402E121AC3488B006FB1F5 /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = ../Staff.h; sourceTree = "<group>"; };
+		C9402E131AC3488B006FB1F5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = ../Staff.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,15 +140,17 @@
 		C9402DF61AC32CB3006FB1F5 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				C9402E121AC3488B006FB1F5 /* Staff.h */,
+				C9402E131AC3488B006FB1F5 /* Staff.m */,
+				C9402E0F1AC3488B006FB1F5 /* Person.h */,
+				C9402E101AC3488B006FB1F5 /* Person.m */,
+				C9402E0C1AC3488B006FB1F5 /* Tutor.h */,
+				C9402E0D1AC3488B006FB1F5 /* Tutor.m */,
+				C9402E091AC3488B006FB1F5 /* Student.h */,
+				C9402E0A1AC3488B006FB1F5 /* Student.m */,
+				C9402E061AC343F0006FB1F5 /* HelperClass.h */,
+				C9402E071AC343F0006FB1F5 /* HelperClass.m */,
 				C9402DC81AC31981006FB1F5 /* Information.xcdatamodeld */,
-				C9402DF31AC32C9F006FB1F5 /* Student.h */,
-				C9402DF41AC32C9F006FB1F5 /* Student.m */,
-				C9402DF01AC32C9F006FB1F5 /* Tutor.h */,
-				C9402DF11AC32C9F006FB1F5 /* Tutor.m */,
-				C9402DED1AC32C9F006FB1F5 /* Person.h */,
-				C9402DEE1AC32C9F006FB1F5 /* Person.m */,
-				C9402DEA1AC32C9D006FB1F5 /* Staff.h */,
-				C9402DEB1AC32C9D006FB1F5 /* Staff.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -250,14 +255,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9402DF21AC32C9F006FB1F5 /* Tutor.m in Sources */,
-				C9402DEF1AC32C9F006FB1F5 /* Person.m in Sources */,
+				C9402E0E1AC3488B006FB1F5 /* Tutor.m in Sources */,
 				C9402DCA1AC31981006FB1F5 /* Information.xcdatamodeld in Sources */,
-				C9402DF51AC32C9F006FB1F5 /* Student.m in Sources */,
+				C9402E111AC3488B006FB1F5 /* Person.m in Sources */,
+				C9402E141AC3488B006FB1F5 /* Staff.m in Sources */,
 				C9402DC71AC31981006FB1F5 /* AppDelegate.m in Sources */,
+				C9402E081AC343F0006FB1F5 /* HelperClass.m in Sources */,
 				C9402DCD1AC31981006FB1F5 /* ViewController.m in Sources */,
 				C9402DC41AC31981006FB1F5 /* main.m in Sources */,
-				C9402DEC1AC32C9D006FB1F5 /* Staff.m in Sources */,
+				C9402E0B1AC3488B006FB1F5 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

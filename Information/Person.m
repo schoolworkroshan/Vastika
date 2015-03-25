@@ -11,9 +11,9 @@
 
 @implementation Person
 
-@dynamic firstName;
-@dynamic lastName;
 @dynamic contactNumber;
 @dynamic email;
+@dynamic firstName;
+@dynamic lastName;
 
 @end

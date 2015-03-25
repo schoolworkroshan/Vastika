@@ -7,11 +7,13 @@
 //
 
 #import "Tutor.h"
+#import "Student.h"
 
 
 @implementation Tutor
 
-@dynamic speciality;
 @dynamic salary;
+@dynamic speciality;
+@dynamic students;
 
 @end

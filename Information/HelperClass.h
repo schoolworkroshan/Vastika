@@ -1,5 +1,5 @@
 //
-//  Tutor.h
+//  HelperClass.h
 //  Information
 //
 //  Created by Roshan Lamichhane on 3/25/15.
@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "Person.h"
 
+@interface HelperClass : NSObject
 
-@interface Tutor : Person
-
-@property (nonatomic, retain) NSString * speciality;
-@property (nonatomic, retain) NSString * salary;
++(void) createSampleDataForTutor;
++(void) printTutors;
 
 @end

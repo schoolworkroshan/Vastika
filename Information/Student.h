@@ -10,17 +10,19 @@
 #import <CoreData/CoreData.h>
 #import "Person.h"
 
+@class Tutor;
 
 @interface Student : Person
 
-@property (nonatomic, retain) NSString * userName;
-@property (nonatomic, retain) NSString * password;
-@property (nonatomic, retain) NSString * degree;
-@property (nonatomic, retain) NSString * visaStatus;
-@property (nonatomic, retain) NSString * interest;
-@property (nonatomic, retain) NSNumber * training;
-@property (nonatomic, retain) NSNumber * working;
 @property (nonatomic, retain) NSNumber * bench;
 @property (nonatomic, retain) NSDate * dateJoined;
+@property (nonatomic, retain) NSString * degree;
+@property (nonatomic, retain) NSString * interest;
+@property (nonatomic, retain) NSString * password;
+@property (nonatomic, retain) NSNumber * training;
+@property (nonatomic, retain) NSString * userName;
+@property (nonatomic, retain) NSString * visaStatus;
+@property (nonatomic, retain) NSNumber * working;
+@property (nonatomic, retain) Tutor *tutor;
 
 @end

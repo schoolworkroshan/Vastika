@@ -7,18 +7,20 @@
 //
 
 #import "Student.h"
+#import "Tutor.h"
 
 
 @implementation Student
 
-@dynamic userName;
-@dynamic password;
-@dynamic degree;
-@dynamic visaStatus;
-@dynamic interest;
-@dynamic training;
-@dynamic working;
 @dynamic bench;
 @dynamic dateJoined;
+@dynamic degree;
+@dynamic interest;
+@dynamic password;
+@dynamic training;
+@dynamic userName;
+@dynamic visaStatus;
+@dynamic working;
+@dynamic tutor;
 
 @end

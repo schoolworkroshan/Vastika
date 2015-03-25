@@ -8,9 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "Person.h"
 
 
-@interface Staff : NSManagedObject
+@interface Staff : Person
 
 @property (nonatomic, retain) NSString * jobTitle;
 
