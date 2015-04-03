@@ -11,15 +11,19 @@
 
 @end
 
+NSString *password;
+NSString *confirmpassword;
+
 @implementation StudentViewController
-@synthesize trainingSwitch, workingSwithch, firstName, lastName, middleName, confirmPassword, password,userName, contact, degree, email, training, working, signUpButtonLabel;
+@synthesize trainingSwitch, workingSwithch, firstName, lastName, middleName, confirmPassword, password,userName, contact, degree, email, training, working,signUpButtonLabel;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     trainingSwitch.on=NO;
     workingSwithch.on=NO;
-    signUpButtonLabel.enabled =NO;
+    signUpButtonLabel.enabled=NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,26 +61,20 @@
     }
 }
 
-
-//Sign up as a student
-
-- (IBAction)signUpButton:(id)sender {
+- (IBAction)signUpButtn:(id)sender {
    
-    [self checkNoEmptyField];
-    if([self matchingPassword] == TRUE){
-        signUpButtonLabel.enabled=YES;
-        
-    }
-    else {
-        signUpButtonLabel.enabled=NO;
-    }
-    
-    [self createStudentAccount];
-    
+      [self createStudentAccount];
+      [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
+//Sign up as a student
+
+
+
+
 //Create a student account
+//
 
 -(void) createStudentAccount {
     
@@ -86,16 +84,24 @@
     student.email=email.text;
     
     student[@"firstName"]=firstName.text;
-    student[@"middleName"]=middleName.text;
+    NSString *string =middleName.text; {
+        if (string == nil) {
+            student[@"middleName"]= @"no middle name" ;
+        }
+        else {
+            student[@"middleName"] = string;
+        }
+    }
+    
     student[@"lastName"]=lastName.text;
     student[@"contact"]=contact.text;
     student[@"degree"]=degree.text;
-    student[@"working"]=working;
-    student[@"training"]=training;
+//    student[@"working"]=working;
+//    student[@"training"]=training;
     
     [student signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {
-            // Hooray! Let them use the app now.
+            
         } else {
             NSLog(@"Sorry");
         }
@@ -105,33 +111,111 @@
 
 //Boolean to check if the values match
 -(BOOL) matchingPassword {
-    if([password.text isEqualToString:confirmPassword.text]){
+    if([password.text isEqualToString:confirmPassword.text] && [password.text length] > 5){
+        self.signUpButtonLabel.enabled=YES;
         return YES;
     }
     else{
-    
-        return NO;
+        UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Password doesn't match and the length of password should be at least 5 character long" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        return FALSE;
     }
 }
 
+
+
+//Checking the values if they are filled
 //Making sure all the fields are filled
 
--(void) checkNoEmptyField {
-    if([firstName.text isEqualToString:@""]|| [lastName.text isEqualToString:@""] ||[contact.text isEqualToString:@""] || [degree.text isEqualToString:@""] || [userName.text isEqualToString:@""] || [password.text isEqualToString:@""])
-    {
-        
-    }
-    else {
-        [self matchingPassword];
-    }
-    
-}
-
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    switch (textField.tag) {
+        case 0:
+            if ([firstName.text isEqualToString:@""] || textField == nil) {
+                //Do something else
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"First name must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                [self.firstName becomeFirstResponder];
+            }
+            break;
+      
+        case 1 :
+            if ([lastName.text isEqualToString:@""]|| textField==nil){
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Last name must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                [self.lastName becomeFirstResponder];
+                
+            }
+            
+            [textField resignFirstResponder];
+            break;
+            
+        case 3:
+            if ([email.text isEqualToString:@""] || textField == nil) {
+                //Do something else
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Email must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                [self.email becomeFirstResponder];
+            }
+            break;
+            
+            
+        case 4 : if ([userName.text length ]< 5 || textField == nil) {
+            //Do something else
+            UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Username be at least 5 character long" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            [self.userName becomeFirstResponder];
+            self.signUpButtonLabel.enabled=NO;
+        }
+            break;
+        case 5:
+            if ([password.text isEqualToString:@""] || textField == nil) {
+                //Do something else
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Password must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                [self.password becomeFirstResponder];
+            }
+            
+            break;
+            
+            
+        case 6 : if ([confirmPassword.text isEqualToString:@""] || textField == nil) {
+            //Do something else
+            UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Confirm password must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            [self.confirmPassword becomeFirstResponder];
+            
+        }
+            [self matchingPassword];
+        break;
+            
+        case 7:
+            if ([degree.text isEqualToString:@""] || textField == nil ) {
+                //Do something else
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Degree must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                [self.degree becomeFirstResponder];
+            }
+            break;
+            
+        case 8: if (contact.text.length<10 || textField == nil) {
+            //Do something else
+            UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Contact must  be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            [self.contact becomeFirstResponder];
+        }
+            
+            break;
+        default: NSLog(@"Sorry");
+            [self matchingPassword];
+            
+            break;
+    }
     
+    [textField resignFirstResponder];
     return YES;
 }
+
+
 
 
     

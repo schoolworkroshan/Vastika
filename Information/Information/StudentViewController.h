@@ -23,10 +23,11 @@
 @property (weak, nonatomic) IBOutlet UISwitch *trainingSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *workingSwithch;
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
-@property (weak, nonatomic) IBOutlet UIButton *signUpButtonLabel;
 @property (nonatomic, assign) NSString  *training;
 @property (nonatomic,assign) NSString   * working;
 - (IBAction)trainingSwitch:(id)sender;
 - (IBAction)workingSwitch:(id)sender;
-- (IBAction)signUpButton:(id)sender;
+- (IBAction)signUpButtn:(id)sender;
+@property (weak, nonatomic) IBOutlet UIButton *signUpButtonLabel;
+
 @end
