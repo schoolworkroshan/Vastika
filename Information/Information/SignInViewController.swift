@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Parse
 
-class SignInViewController: UIViewController {
 
+
+class SignInViewController: UIViewController
+
+{
+    @IBOutlet weak var userName: UITextField!
+
+    @IBOutlet weak var passWord: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +41,18 @@ class SignInViewController: UIViewController {
 
     
     @IBAction func signIn(sender: AnyObject) {
+       
+         PFUser.logInWithUsernameInBackground(userName.text, password: passWord.text, block: { (user, error) -> Void in
+            if(user != nil) {
+                self.performSegueWithIdentifier("studentSignIn", sender: self)
+            }
+             else {
+                println("Either password or username doesn't match")
+            }
+         })
         
+       
+       
     }
     
     

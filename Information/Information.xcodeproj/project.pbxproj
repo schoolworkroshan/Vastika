@@ -93,8 +93,8 @@
 		C9402E101AC3488B006FB1F5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
 		C9402E121AC3488B006FB1F5 /* Staff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Staff.h; path = ../Staff.h; sourceTree = "<group>"; };
 		C9402E131AC3488B006FB1F5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = ../Staff.m; sourceTree = "<group>"; };
-		C9D8DDCD1ACEE6DD00E6AC87 /* Information-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Information-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		C9D8DDD81AD2E12B00E6AC87 /* <#Information#>-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "<#Information#>-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +159,7 @@
 		C9402DB51AC31980006FB1F5 = {
 			isa = PBXGroup;
 			children = (
+				C9D8DDD81AD2E12B00E6AC87 /* <#Information#>-Bridging-Header.h */,
 				C915A2871AC46F3A00D17E1E /* Frameworks */,
 				C9402DC01AC31981006FB1F5 /* Information */,
 				C9402DDD1AC31981006FB1F5 /* InformationTests */,
@@ -189,7 +190,6 @@
 				C9402DD11AC31981006FB1F5 /* Images.xcassets */,
 				C9402DF61AC32CB3006FB1F5 /* Core Data */,
 				C9402DC11AC31981006FB1F5 /* Supporting Files */,
-				C9D8DDCD1ACEE6DD00E6AC87 /* Information-Bridging-Header.h */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -419,6 +419,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rustic_rosh/Desktop/Vastika/Information/<#Information#>-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -454,6 +455,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/rustic_rosh/Desktop/Vastika/Information/<#Information#>-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -471,7 +473,7 @@
 				INFOPLIST_FILE = Information/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Information/Information-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -488,7 +490,7 @@
 				INFOPLIST_FILE = Information/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Information/Information-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

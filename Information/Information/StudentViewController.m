@@ -111,7 +111,7 @@ NSString *confirmpassword;
 
 //Boolean to check if the values match
 -(BOOL) matchingPassword {
-    if([password.text isEqualToString:confirmPassword.text] && [password.text length] > 5){
+    if([password.text isEqualToString:confirmPassword.text] && [password.text length] >= 5){
         self.signUpButtonLabel.enabled=YES;
         return YES;
     }
