@@ -38,6 +38,8 @@
 		C9402E111AC3488B006FB1F5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E101AC3488B006FB1F5 /* Person.m */; };
 		C9402E141AC3488B006FB1F5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E131AC3488B006FB1F5 /* Staff.m */; };
 		C9D8DDCF1ACEE6DD00E6AC87 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */; };
+		C9D8DDDA1AD2EC1000E6AC87 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */; };
+		C9D8DDDC1AD2F72D00E6AC87 /* StaffSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		C9402E131AC3488B006FB1F5 /* Staff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Staff.m; path = ../Staff.m; sourceTree = "<group>"; };
 		C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C9D8DDD81AD2E12B00E6AC87 /* <#Information#>-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "<#Information#>-Bridging-Header.h"; sourceTree = "<group>"; };
+		C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
+		C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffSignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				C915A29F1AC471D800D17E1E /* StudentViewController.m */,
 				C9402DCE1AC31981006FB1F5 /* Main.storyboard */,
 				C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */,
+				C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */,
+				C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */,
 				C9402DD11AC31981006FB1F5 /* Images.xcassets */,
 				C9402DF61AC32CB3006FB1F5 /* Core Data */,
 				C9402DC11AC31981006FB1F5 /* Supporting Files */,
@@ -337,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D8DDDA1AD2EC1000E6AC87 /* StudentViewController.swift in Sources */,
 				C9D8DDCF1ACEE6DD00E6AC87 /* SignInViewController.swift in Sources */,
 				C9402E0E1AC3488B006FB1F5 /* Tutor.m in Sources */,
 				C9402DCA1AC31981006FB1F5 /* Information.xcdatamodeld in Sources */,
@@ -346,6 +353,7 @@
 				C9402E141AC3488B006FB1F5 /* Staff.m in Sources */,
 				C9402DC71AC31981006FB1F5 /* AppDelegate.m in Sources */,
 				C9402E081AC343F0006FB1F5 /* HelperClass.m in Sources */,
+				C9D8DDDC1AD2F72D00E6AC87 /* StaffSignInViewController.swift in Sources */,
 				C9402DC41AC31981006FB1F5 /* main.m in Sources */,
 				C9402E0B1AC3488B006FB1F5 /* Student.m in Sources */,
 			);

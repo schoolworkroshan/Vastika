@@ -19,8 +19,8 @@
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YtX-5Z-GQd">
                                 <rect key="frame" x="66" y="285" width="469" height="30"/>
-                                <color key="backgroundColor" red="0.97293730629999997" green="0.96715441179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.98697916669999997" green="0.98697916669999997" blue="0.98697916669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96642954496640165" green="0.96591071215830138" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.14738343253968256" green="0.14738343253968256" blue="0.14738343253968256" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -30,7 +30,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5rX-MD-Rve">
                                 <rect key="frame" x="66" y="315" width="469" height="30"/>
                                 <color key="backgroundColor" red="0.97293730629999997" green="0.96715441179999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.98697916669999997" green="0.98697916669999997" blue="0.98697916669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0045882936507936067" green="0.0045882936507936067" blue="0.0045882936507936067" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
@@ -86,7 +86,8 @@
                         <outlet property="passWord" destination="5rX-MD-Rve" id="PnR-ky-2sP"/>
                         <outlet property="userName" destination="YtX-5Z-GQd" id="LDy-Na-JaM"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUp" modalPresentationStyle="formSheet" id="s3S-MT-xN7"/>
-                        <segue destination="Kkz-2e-w46" kind="presentation" identifier="studentSignIn" id="H5B-td-Wyd"/>
+                        <segue destination="Kkz-2e-w46" kind="show" identifier="studentSignIn" id="zSw-fg-fgX"/>
+                        <segue destination="yxf-Se-0j2" kind="presentation" identifier="staffSignIn" id="DgN-g2-YK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncj-a0-Tih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -855,10 +856,36 @@
             </objects>
             <point key="canvasLocation" x="126" y="630"/>
         </scene>
-        <!--View Controller-->
+        <!--Table View Controller-->
+        <scene sceneID="K30-NC-KSd">
+            <objects>
+                <tableViewController id="yxf-Se-0j2" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jre-TE-Ao9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="2EK-X2-gXz">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2EK-X2-gXz" id="VcN-eu-nff">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="yxf-Se-0j2" id="CE4-dG-R0j"/>
+                            <outlet property="delegate" destination="yxf-Se-0j2" id="jU8-yG-iXe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wEN-dZ-F9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="1382"/>
+        </scene>
+        <!--Student View Controller-->
         <scene sceneID="Q3E-Ql-YeK">
             <objects>
-                <viewController id="Kkz-2e-w46" sceneMemberID="viewController">
+                <viewController id="Kkz-2e-w46" customClass="StudentViewController" customModule="Information" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eiI-cd-J2W"/>
                         <viewControllerLayoutGuide type="bottom" id="SRG-Dj-ny7"/>
@@ -866,12 +893,27 @@
                     <view key="view" contentMode="scaleToFill" id="bo3-Sy-bnc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-Pt-jG0">
+                                <rect key="frame" x="270" y="562" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="studentSignOutButton:" destination="Kkz-2e-w46" eventType="touchUpInside" id="2bB-DO-d03"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SRG-Dj-ny7" firstAttribute="top" secondItem="7fw-Pt-jG0" secondAttribute="bottom" constant="8" id="cHh-gu-TyL"/>
+                            <constraint firstAttribute="centerX" secondItem="7fw-Pt-jG0" secondAttribute="centerX" id="ye6-gH-36q"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEK-sg-oPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-641" y="1285"/>
+            <point key="canvasLocation" x="-646" y="1382"/>
         </scene>
     </scenes>
 </document>
