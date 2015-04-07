@@ -11,14 +11,17 @@ import Parse
 
 
 
-class SignInViewController: UIViewController
+class SignInViewController: UIViewController, UITextFieldDelegate
 
 {
     @IBOutlet weak var userName: UITextField!
-
+    var student = [NSString]()
     @IBOutlet weak var passWord: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +30,7 @@ class SignInViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
     
 
     /*
@@ -38,22 +42,28 @@ class SignInViewController: UIViewController
         // Pass the selected object to the new view controller.
     }
     */
+    
 
     
     @IBAction func signIn(sender: AnyObject) {
        
          PFUser.logInWithUsernameInBackground(userName.text, password: passWord.text, block: { (user, error) -> Void in
-            if(user != nil) {
+            if(user != nil && self.student.count >=  1) {
+                println("He is a student");
                 self.performSegueWithIdentifier("studentSignIn", sender: self)
             }
+            
+            else if (user != nil && self.student.count == 0) {
+                println("He is an admin")
+                self.performSegueWithIdentifier("staffSignIn", sender: self)
+            }
+                
              else {
                 println("Either password or username doesn't match")
             }
          })
-        
-       
-       
     }
+   
     
     
     @IBAction func signUp(sender: AnyObject) {
@@ -65,8 +75,23 @@ class SignInViewController: UIViewController
     
      func textFieldShouldReturn(textField: UITextField!) -> Bool
      {
+        
         textField.resignFirstResponder();
+        var userQuery = PFUser.query()
+        userQuery.whereKey("username", equalTo: self.userName.text)
+        //userQuery.whereKey("password", equalTo: self.passWord.text)
+        userQuery.whereKey("Type", equalTo: "student")
+        userQuery.findObjectsInBackgroundWithBlock({ (users, error) -> Void in
+            println(users)
+            for PFUser in users {
+                self.student.append(PFUser.username)
+//                println(self.student)
+            }
+        })
+        
         return true
     }
     
 }
+
+
