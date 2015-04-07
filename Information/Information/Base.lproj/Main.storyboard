@@ -87,7 +87,7 @@
                         <outlet property="userName" destination="YtX-5Z-GQd" id="LDy-Na-JaM"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="signUp" modalPresentationStyle="formSheet" id="s3S-MT-xN7"/>
                         <segue destination="Kkz-2e-w46" kind="show" identifier="studentSignIn" id="zSw-fg-fgX"/>
-                        <segue destination="yxf-Se-0j2" kind="presentation" identifier="staffSignIn" id="DgN-g2-YK2"/>
+                        <segue destination="9Sa-J5-4IH" kind="presentation" identifier="staffSignIn" id="rci-E5-eTj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncj-a0-Tih" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -856,31 +856,31 @@
             </objects>
             <point key="canvasLocation" x="126" y="630"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="K30-NC-KSd">
+        <!--Student Table View Controller-->
+        <scene sceneID="h6o-Qg-ZNv">
             <objects>
-                <tableViewController id="yxf-Se-0j2" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Jre-TE-Ao9">
+                <tableViewController id="9Sa-J5-4IH" customClass="StudentTableViewController" customModule="Information" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pjo-On-33v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="2EK-X2-gXz">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Kvf-eQ-oMY">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2EK-X2-gXz" id="VcN-eu-nff">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kvf-eQ-oMY" id="JhD-er-uBx">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="yxf-Se-0j2" id="CE4-dG-R0j"/>
-                            <outlet property="delegate" destination="yxf-Se-0j2" id="jU8-yG-iXe"/>
+                            <outlet property="dataSource" destination="9Sa-J5-4IH" id="gEK-ed-m4Z"/>
+                            <outlet property="delegate" destination="9Sa-J5-4IH" id="wQa-if-z3e"/>
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wEN-dZ-F9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySl-dU-H1g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="1382"/>
+            <point key="canvasLocation" x="153" y="1352"/>
         </scene>
         <!--Student View Controller-->
         <scene sceneID="Q3E-Ql-YeK">

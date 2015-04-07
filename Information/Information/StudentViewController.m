@@ -98,6 +98,8 @@ NSString *confirmpassword;
     student[@"degree"]=degree.text;
 //    student[@"working"]=working;
 //    student[@"training"]=training;
+    student[@"Type"]=@"student";
+    [PFACL setDefaultACL:[PFACL ACL] withAccessForCurrentUser:NO];
     
     [student signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (!error) {

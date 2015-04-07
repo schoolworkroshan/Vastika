@@ -39,7 +39,7 @@
 		C9402E141AC3488B006FB1F5 /* Staff.m in Sources */ = {isa = PBXBuildFile; fileRef = C9402E131AC3488B006FB1F5 /* Staff.m */; };
 		C9D8DDCF1ACEE6DD00E6AC87 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */; };
 		C9D8DDDA1AD2EC1000E6AC87 /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */; };
-		C9D8DDDC1AD2F72D00E6AC87 /* StaffSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */; };
+		C9E376831AD4772A008A2C28 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E376821AD4772A008A2C28 /* StudentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,7 @@
 		C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		C9D8DDD81AD2E12B00E6AC87 /* <#Information#>-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "<#Information#>-Bridging-Header.h"; sourceTree = "<group>"; };
 		C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
-		C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaffSignInViewController.swift; sourceTree = "<group>"; };
+		C9E376821AD4772A008A2C28 /* StudentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +163,7 @@
 		C9402DB51AC31980006FB1F5 = {
 			isa = PBXGroup;
 			children = (
+				C9E376821AD4772A008A2C28 /* StudentTableViewController.swift */,
 				C9D8DDD81AD2E12B00E6AC87 /* <#Information#>-Bridging-Header.h */,
 				C915A2871AC46F3A00D17E1E /* Frameworks */,
 				C9402DC01AC31981006FB1F5 /* Information */,
@@ -191,7 +192,6 @@
 				C915A29F1AC471D800D17E1E /* StudentViewController.m */,
 				C9402DCE1AC31981006FB1F5 /* Main.storyboard */,
 				C9D8DDCE1ACEE6DD00E6AC87 /* SignInViewController.swift */,
-				C9D8DDDB1AD2F72C00E6AC87 /* StaffSignInViewController.swift */,
 				C9D8DDD91AD2EC1000E6AC87 /* StudentViewController.swift */,
 				C9402DD11AC31981006FB1F5 /* Images.xcassets */,
 				C9402DF61AC32CB3006FB1F5 /* Core Data */,
@@ -353,8 +353,8 @@
 				C9402E141AC3488B006FB1F5 /* Staff.m in Sources */,
 				C9402DC71AC31981006FB1F5 /* AppDelegate.m in Sources */,
 				C9402E081AC343F0006FB1F5 /* HelperClass.m in Sources */,
-				C9D8DDDC1AD2F72D00E6AC87 /* StaffSignInViewController.swift in Sources */,
 				C9402DC41AC31981006FB1F5 /* main.m in Sources */,
+				C9E376831AD4772A008A2C28 /* StudentTableViewController.swift in Sources */,
 				C9402E0B1AC3488B006FB1F5 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
