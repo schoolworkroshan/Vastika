@@ -84,14 +84,14 @@ NSString *confirmpassword;
     student.email=email.text;
     
     student[@"firstName"]=firstName.text;
-    NSString *string =middleName.text; {
-        if (string == nil) {
+    NSString *string =middleName.text;
+    if (string.length == 0) {
             student[@"middleName"]= @"no middle name" ;
         }
         else {
             student[@"middleName"] = string;
         }
-    }
+    
     
     student[@"lastName"]=lastName.text;
     student[@"contact"]=contact.text;
@@ -114,7 +114,6 @@ NSString *confirmpassword;
 //Boolean to check if the values match
 -(BOOL) matchingPassword {
     if([password.text isEqualToString:confirmPassword.text] && [password.text length] >= 5){
-        self.signUpButtonLabel.enabled=YES;
         return YES;
     }
     else{
@@ -128,7 +127,7 @@ NSString *confirmpassword;
 
 //Checking the values if they are filled
 //Making sure all the fields are filled
-
+//
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
     switch (textField.tag) {
         case 0:
@@ -148,13 +147,12 @@ NSString *confirmpassword;
                 
             }
             
-            [textField resignFirstResponder];
             break;
             
         case 3:
-            if ([email.text isEqualToString:@""] || textField == nil) {
+            if ([email.text length ] < 6  || textField == nil) {
                 //Do something else
-                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Email must be filled" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Email must be at least 6 character" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
                 [alert show];
                 [self.email becomeFirstResponder];
             }
@@ -166,7 +164,7 @@ NSString *confirmpassword;
             UIAlertView *alert = [[UIAlertView alloc ]initWithTitle:@"Sorry" message:@"Username be at least 5 character long" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
             [alert show];
             [self.userName becomeFirstResponder];
-            self.signUpButtonLabel.enabled=NO;
+            
         }
             break;
         case 5:
@@ -205,11 +203,8 @@ NSString *confirmpassword;
             [alert show];
             [self.contact becomeFirstResponder];
         }
-            
             break;
         default: NSLog(@"Sorry");
-            [self matchingPassword];
-            
             break;
     }
     
@@ -220,5 +215,22 @@ NSString *confirmpassword;
 
 
 
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+ NSUInteger textLength = [textField.text length];
+    NSLog(@"Textfield Length :%li",textLength);
+    return YES;
+}
+
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    if(self.firstName.text.length>0 && self.lastName.text.length>0 && self.userName.text.length>=5 && self.email.text.length>5 && self.password.text.length>=5 & self.confirmPassword.text.length>=5 && [self.password.text isEqualToString:self.confirmPassword.text]  && self.degree.text.length>0 && self.contact.text.length == 10) {
+        
+        signUpButtonLabel.enabled=YES;
+    }
+    else {
+         signUpButtonLabel.enabled=NO;
+    }
+}
     
 @end
